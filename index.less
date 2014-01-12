@@ -97,7 +97,6 @@ p{
 
 
 /* STYLE TIME */
-
 body{
 	.wrapper{
 		.block;
@@ -119,6 +118,8 @@ body{
 			text-align: center;
 			padding: 10px 10px 5px;
 			text-shadow: 3px 3px rgba(73, 52, 41, 0.6);
+			font-weight: 800;
+			font-size: 30px;
 		}
 		.login_input{
 			.block;
@@ -180,6 +181,10 @@ body{
 		opacity: 0.9;
 	}//search
 	#sidebar{
+		display: none;
+		width: 100px;
+		background: gray;
+		height: 100vh;
 		#user_photo{
 			.block;
 			width: 50px;
@@ -197,6 +202,14 @@ body{
 			text-align: center;
 			li{
 				padding: 8px 10px;
+				.transition;
+				a{
+					font-weight: 500;
+				}
+			}
+			a:hover{
+				color: @teal;
+				.transition;
 			}
 			#sidebar_sublisting{
 				.block;
@@ -205,7 +218,9 @@ body{
 					font-size: 13px;
 					font-weight: 400;
 					color: rgb(180, 180, 180);
-
+					a{
+						font-weight: 400;
+					}
 				}/*
 				li:first-child{
 					border-top: 1px solid #202020;
@@ -344,6 +359,18 @@ body{
 						box-shadow:         5px 5px 0px 0px rgba(30, 30, 30, 0.75);
 						margin-top: 10px;
 						font-size: 13px;
+						.transition;
+					}
+					li:hover{
+						background: rgba(250,250,250,0.15);
+						.transition;
+
+					}
+					img:hover{
+						opacity: 1;
+					}
+					.active{
+						background: rgba(250,250,250,0.15);
 					}
 				}//iclickr_options
 			}//iclicker_answer
@@ -415,6 +442,7 @@ body{
 						text-align: center;
 						font-weight: 600;
 						font-size: 11px;
+						.transition;
 						img{
 							width: 25px;
 							.block;
@@ -422,6 +450,10 @@ body{
 							margin: 0 auto 10px auto;
 						}
 					}//grid_cell
+					#grid_cell:hover{
+						.transition;
+						background: rgba(76,76,76,0.3);;
+					}
 				}//grid
 			}//course_grid
 		}//iclicker_idle

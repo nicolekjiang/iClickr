@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	</head>
 	<body>
-	  <div class="login_wrapper wrapper" style="display:none;">
+	  <div class="login_wrapper wrapper" style="display:block;">
 	    <img id="logo" src="/img/logo.png">
 	    <h1 id="login_title">iCLiCKR</h1>
 	    <div class="login_input">
@@ -32,22 +32,20 @@
 		<button id="search"></button>
 		<div id="sidebar" style="display:none">
 			<img id="user_photo" src="/img/user_photo.jpg">
-			<p>hello user</p>
+			<p>hello user!</p>
 			<ul id="sidebar_listing">
-				<li>Profile</li>
-				<li>Courses</li>
+				<li><a href="">Profile</a></li>
+				<li><a href="">Courses</li><a></li>
 				<ul id="sidebar_sublisting">
-					<li>View All</li>
-					<li>Enrolled</li>
-					<li>Not Enrolled</li>
-					<li>Create</li>
+					<li><a href="">View All</a></li>
+					<li><a href="">Enrolled</a></li>
+					<li><a href="">Not Enrolled</a></li>
+					<li><a href="">Create</a></li>
 				</ul>
-				<li>Enrolled</li>
-				<ul id="sidebar_sublisting">
-					<li>CS248</li>
-					<li>SCI238</li>
-					<li>ECE250</li>
-				</ul>
+				<li id="back">Back</li>
+				<li style="position: absolute; bottom: 20px; width: 94%; padding: 0;"><a href="">
+					<img style="opacity:0.4; width: 15px;" src="/img/logoff.png">
+				</a></li>
 			</ul>
 		</div>
 		<div class="course_wrapper wrapper" style="display:none">
@@ -96,7 +94,7 @@
 				</ul>
 			</div>
 		</div><!-- end course_wrapper -->
-		<div class="iclicker_wrapper wrapper" style="display:block">
+		<div class="iclicker_wrapper wrapper" style="display:none">
 			<div class="iclicker_header">
 				<div class="header_text">
 					<h4>SCI238</h4>
@@ -109,11 +107,11 @@
 				</div>
 				<div class="iclicker_answer">
 					<ul id="iclicker_options">
-						<li><a href="">maybe it is A</a></li>
-						<li><a href="">perhaps it is B</a></li>
-						<li><a href="">or it would be C</a></li>
-						<li><a href="">why not try D</a></li>
-						<li><a href="">are you sure it aint E</a></li>
+						<li class="answer">maybe it is A</li>
+						<li class="answer">perhaps it is B</li>
+						<li class="answer">or it would be C</li>
+						<li class="answer">why not try D</li>
+						<li class="answer">are you sure it aint E</li>
 					</ul>
 				</div>
 				<div class="timer">
@@ -121,7 +119,7 @@
 					<h4>00:05</h4>
 				</div>
 			</div>
-			<div class="iclicker_idle">
+			<div class="iclicker_idle" style="display:block">
 				<div class="course_prof">
 					<img id="prof_photo" src="/img/user_photo.jpg">
 					<div id="prof_desc">
@@ -142,31 +140,35 @@
 
 				<div class="course_grid">
 					<ul id="grid">
-						<li id="grid_cell">
-							<img src="/img/wtf.png">
-							WTF
+						<li class="wtf" id="grid_cell">
+								<img src="/img/wtf.png">
+								WTF
 						</li>
-						<li id="grid_cell">
-							<img src="/img/discuss.png">
-							DISCUSS
+						<li class="discuss"  id="grid_cell">
+								<img src="/img/discuss.png">
+								DISCUSS
 						</li>
-						<li id="grid_cell">
-							<img src="/img/stats.png">
-							STATS
+						<li class="stats"  id="grid_cell">
+								<img src="/img/stats.png">
+								STATS
 						</li>
 					</ul>
 					<ul id="grid">
-						<li id="grid_cell">
-							<img src="/img/learn.png">
-							LEARN
+						<li class="refresh"  id="grid_cell">
+							<a href="">
+								<img src="/img/learn.png">
+								LEARN
+							</a>
 						</li>
-						<li id="grid_cell">
-							<img src="/img/more.png">
-							MORE
+						<li class="refresh"  id="grid_cell">
+							<a href="">
+								<img src="/img/more.png">
+								MORE
+							</a>
 						</li>
-						<li id="grid_cell">
-							<img src="/img/refresh.png">
-							REFRESH
+						<li class="refresh" id="grid_cell">
+								<img src="/img/refresh.png">
+								REFRESH
 						</li>
 					</ul>
 				</div>
@@ -183,6 +185,45 @@
 	<script>
 		/* SIDEBAR*/
 		$("#toggle").pageslide();
+	</script>
+
+	<script>
+		$('#login').click(function(){
+			console.log('hi');
+			$('.login_wrapper').fadeOut();
+				$('.course_wrapper').fadeIn();
+
+		})
+		$('.course_ongoing').click(function(){
+			$('.course_ongoing').fadeOut();
+			$('.iclicker_wrapper').fadeIn();
+
+		})
+		$('#back').click(function(){
+			$('.course_ongoing').fadeOut();
+			$('.iclicker_wrapper').fadeIn();
+		});
+
+		$('.refresh').click(function(){
+			$('.iclicker_idle').fadeOut();
+			$('.iclicker_active').fadeIn();
+		});
+
+		$('.answer').click(function(){
+			$('.iclicker_active').fadeOut();
+			$('.iclicker_idle').fadeIn();
+		});
+
+		$('.wtf').click(function(){
+			alert("Your frustration has been expressed");
+		});
+		$('.discuss').click(function(){
+			alert("STFU and go to bed");
+		});
+		$('.stats').click(function(){
+			alert("STFU and go to bed");
+		});
+
 	</script>
 
 	</html>

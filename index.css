@@ -287,6 +287,8 @@ body .login_wrapper #login_title {
   text-align: center;
   padding: 10px 10px 5px;
   text-shadow: 3px 3px rgba(73, 52, 41, 0.6);
+  font-weight: 800;
+  font-size: 30px;
 }
 body .login_wrapper .login_input {
   display: block;
@@ -344,6 +346,12 @@ body #search {
   background-size: 22px;
   opacity: 0.9;
 }
+body #sidebar {
+  display: none;
+  width: 100px;
+  background: rgb(31, 31, 31);
+  height: 100vh;
+}
 body #sidebar #user_photo {
   display: block;
   width: 50px;
@@ -362,6 +370,22 @@ body #sidebar #sidebar_listing {
 }
 body #sidebar #sidebar_listing li {
   padding: 8px 10px;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+body #sidebar #sidebar_listing li a {
+  font-weight: 500;
+}
+body #sidebar #sidebar_listing a:hover {
+  color: #5bbea1;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
 body #sidebar #sidebar_listing #sidebar_sublisting {
   display: block;
@@ -381,6 +405,9 @@ body #sidebar #sidebar_listing #sidebar_sublisting li {
   font-size: 13px;
   font-weight: 400;
   color: #b4b4b4;
+}
+body #sidebar #sidebar_listing #sidebar_sublisting li a {
+  font-weight: 400;
 }
 body .course_wrapper {
   padding: 0px;
@@ -505,6 +532,25 @@ body .iclicker_wrapper .iclicker_active .iclicker_answer ul li {
   box-shadow: 5px 5px 0px 0px rgba(30, 30, 30, 0.75);
   margin-top: 10px;
   font-size: 13px;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+body .iclicker_wrapper .iclicker_active .iclicker_answer ul li:hover {
+  background: rgba(250, 250, 250, 0.15);
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+}
+body .iclicker_wrapper .iclicker_active .iclicker_answer ul img:hover {
+  opacity: 1;
+}
+body .iclicker_wrapper .iclicker_active .iclicker_answer ul .active {
+  background: rgba(250, 250, 250, 0.15);
 }
 body .iclicker_wrapper .iclicker_active .timer {
   display: block;
@@ -577,12 +623,25 @@ body .iclicker_wrapper .iclicker_idle .course_grid #grid #grid_cell {
   text-align: center;
   font-weight: 600;
   font-size: 11px;
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
 body .iclicker_wrapper .iclicker_idle .course_grid #grid #grid_cell img {
   width: 25px;
   display: block;
   text-align: center;
   margin: 0 auto 10px auto;
+}
+body .iclicker_wrapper .iclicker_idle .course_grid #grid #grid_cell:hover {
+  -webkit-transition: all 0.7s ease 0s;
+  -moz-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  -ms-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+  background: rgba(76, 76, 76, 0.3);
 }
 body #pageslide {
   width: 100px;
