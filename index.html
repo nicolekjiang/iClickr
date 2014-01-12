@@ -1,1 +1,188 @@
-hello world
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>  
+		<title>iClickr</title>
+		<meta name="author" content="Nicole Jiang">
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=false">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" type="text/css" href="/css/jquery.pageslide.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	</head>
+	<body>
+	  <div class="login_wrapper wrapper" style="display:none;">
+	    <img id="logo" src="/img/logo.png">
+	    <h1 id="login_title">iCLiCKR</h1>
+	    <div class="login_input">
+	      <input id="uWaterlooId" name="profileName" placeholder="USERNAME" size="30" tabindex="1" type="text">
+	      <input id="user_password" name="user_password" placeholder="PASSWORD" size="30" tabindex="2" type="password">
+	      <input id="login" type="button" value="LOG IN">
+	    </div>
+	  </div><!-- end login_wrapper -->
+		<button href="#sidebar" id="toggle">
+			<span class="icon_bar"></span>
+			<span class="icon_bar"></span>
+			<span class="icon_bar"></span>
+		</button>
+		<button id="search"></button>
+		<div id="sidebar" style="display:none">
+			<img id="user_photo" src="/img/user_photo.jpg">
+			<p>hello user</p>
+			<ul id="sidebar_listing">
+				<li>Profile</li>
+				<li>Courses</li>
+				<ul id="sidebar_sublisting">
+					<li>View All</li>
+					<li>Enrolled</li>
+					<li>Not Enrolled</li>
+					<li>Create</li>
+				</ul>
+				<li>Enrolled</li>
+				<ul id="sidebar_sublisting">
+					<li>CS248</li>
+					<li>SCI238</li>
+					<li>ECE250</li>
+				</ul>
+			</ul>
+		</div>
+		<div class="course_wrapper wrapper" style="display:none">
+			<div class="course_header">
+				<h4>Enroll in a</h4>
+				<h1>Course</h1>
+			</div>
+			<div class="course_selection">
+				<ul id="ongoing">
+					<h4>Ongoing</h4>
+					<hr>
+					<li class="course_ongoing">
+						<p>SCI238</p>
+						<h3>Intro to Astronomy</h3>
+						<div class="course_info">
+							<img src="/img/location.png">
+							<p>MC1006</p>
+						</div>
+						<div class="course_info">
+							<img src="/img/time.png">
+							<p>6:00pm - 7:50pm</p>
+						</div>
+						<div id="course_enter">
+							<img id="course_enter" src="/img/arrow.png">
+						</div>
+					</li>
+					<li class="course_ongoing">
+						<p>SCI238</p>
+						<h3>Intro to Astronomy</h3>
+						<div class="course_info">
+							<img src="/img/location.png">
+							<p>MC1006</p>
+						</div>
+						<div class="course_info">
+							<img src="/img/time.png">
+							<p>6:00pm - 7:50pm</p>
+						</div>
+						<div id="course_enter">
+							<img id="course_enter" src="/img/arrow.png">
+						</div>
+					</li>
+				</ul>
+				<ul id="offline">
+					<h4>Offline</h4>
+					<hr>
+				</ul>
+			</div>
+		</div><!-- end course_wrapper -->
+		<div class="iclicker_wrapper wrapper" style="display:block">
+			<div class="iclicker_header">
+				<div class="header_text">
+					<h4>SCI238</h4>
+					<h1>INTRO TO ASTRONOMY</h1>
+				</div>
+			</div><!-- end iclicker_header -->
+			<div class="iclicker_active" style="display: none">
+				<div class="iclicker_question">
+					<h3>Question #3</h3>
+				</div>
+				<div class="iclicker_answer">
+					<ul id="iclicker_options">
+						<li><a href="">maybe it is A</a></li>
+						<li><a href="">perhaps it is B</a></li>
+						<li><a href="">or it would be C</a></li>
+						<li><a href="">why not try D</a></li>
+						<li><a href="">are you sure it aint E</a></li>
+					</ul>
+				</div>
+				<div class="timer">
+					<h3>timer:</h3>
+					<h4>00:05</h4>
+				</div>
+			</div>
+			<div class="iclicker_idle">
+				<div class="course_prof">
+					<img id="prof_photo" src="/img/user_photo.jpg">
+					<div id="prof_desc">
+						<h4>professor</h4>
+						<h2>JOHN DOE</h2>
+						<h4>SCI200, SCI239, SCI341</h4>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="course_information">
+					<img id="course_photo" src="/img/user_photo.jpg">
+					<div id="course_desc">
+						<h4>Class info</h4>
+						<p>Powder lollipop ice cream bonbon oat cake gummi bears marshmallow cupcake. Pie ice.Muffin jujubes wafer icing sugar plum sweet roll. Marzipan sesame snaps gummies.</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+
+				<div class="course_grid">
+					<ul id="grid">
+						<li id="grid_cell">
+							<img src="/img/wtf.png">
+							WTF
+						</li>
+						<li id="grid_cell">
+							<img src="/img/discuss.png">
+							DISCUSS
+						</li>
+						<li id="grid_cell">
+							<img src="/img/stats.png">
+							STATS
+						</li>
+					</ul>
+					<ul id="grid">
+						<li id="grid_cell">
+							<img src="/img/learn.png">
+							LEARN
+						</li>
+						<li id="grid_cell">
+							<img src="/img/more.png">
+							MORE
+						</li>
+						<li id="grid_cell">
+							<img src="/img/refresh.png">
+							REFRESH
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div><!-- end course_wrapper -->
+
+
+
+	</body>
+
+	<script src="/js/jquery.pageslide.js"></script>
+	<script>
+		/* SIDEBAR*/
+		$("#toggle").pageslide();
+	</script>
+
+	</html>
